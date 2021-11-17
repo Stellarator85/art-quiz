@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art-Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/fav.png" />
+</head>
+<body>
+    <main >
+        <section class="screen2"> 
+            <div class="settings"><img class="close-icon" src="images/Icon_close.svg"><div class="sound-settings">
+            </br></br>Volume:&nbsp;<span class="volume-value"></span>%</br></br>0%<input class="volume-range" step="1"  min="0" max="100" type="range">100%</br>
+            <input type="checkbox" id="mute"><label class="mute-label" for="mute">ON/OFF</label></br></br></br>
+            </div>
+            <div class="time-settings">Timer:&nbsp;<span class="time-value"></span></br>5<input class="time-range" type="range" min="5" max="30" step="5">30</br>
+            <input type="checkbox" id="time"><label class="time-label" for="time">ON/OFF</label></br></br></br>
+            </div><button class="settings-button">Save</button></br></br></br></div>
+           <h4>Welcome To The Quiz!</br>Which Topic Do You Love Better?</h4>
+            <div class="screen2-quiz-options-container">
+            <img id="painters" class="painters-poster" src="images/painters.jpg"> 
+            <label class="quiz-options-label" for="painters">&nbsp;&nbsp;Painters</label>
+            <img class="paintings-poster" id="paintings" src="images/paintings.png">
+            <label class="quiz-options-label" for="paintings">&nbsp;&nbsp;Paintings</label>
+        </div>
+        <div class="settings-container"><img class="home-icon" src="images/Home_logo.svg" id="home-icon"><label class="home-label" for="home-icon">&nbsp;Home</label><img class="settings-icon" src="images/settings.svg" id="settings-icon"><label class="settings-label" for="settings-icon">&nbsp;Settings</label></div></section>
+        <section class="screen1">
+    <h1>Art-</br>Quiz</h1>
+    <h2>Click or tap to start</h2>
+    </section>
+    </main>
+    <footer>
+    <a href="https://github.com/Stellarator85" target="_blank" class="github-section">
+    <img src="images/github-logo.svg" class="github-logo">Stellarator85</a>© 2021
+    <a href="https://rs.school/js/" target="_blank" class="rs-school-section" >
+        <img src="images/rs_school_js.svg" class="rs-school-logo">Javascript/Front-end 2021Q3</a>
+
+        </footer>
+<script>
+    document.querySelector(".screen1").addEventListener("click", function (e) {
+            if (e.which = 1)
+            
+            
+            document.querySelector(".screen2").classList.add("game-mode");
+            
+
+         //   document.querySelector("main").insertAdjacentHTML('afterbegin', 
+          //  `<img class="painters-poster" src="images/painters.jpg"></img>`);
+            //document.querySelector("h2").classList.add("invisible");
+             
+        }
+        );
+
+    const settings = document.createElement(`div`);
+    settings.innerHTML=`<div class="sound-settings">
+        Volume</br>min<input type="range">max</div>
+        <div class="time-settings">Time</br>5<input class="time-range" type="range" min="5" max="30" step="5">30</div>`;
+        settings.setAttribute("id","settings");
+        settings.classList.add("settings");
+    
+    
+   class ttt{
+       constructor(transition){
+            this.transition= transition
+       }
+   };
+document.addEventListener("click", function (e) {
+
+if (e.which = 1 && !document.querySelector(".settings").classList.contains("settings-active") 
+ &&(e.target === document.querySelector(".home-icon")||
+ e.target === document.querySelector(".home-label")))
+document.querySelector(".screen2").classList.remove("game-mode");
+    if (e.which = 1 && document.querySelector(".settings").classList.contains("settings-active") 
+    &&(e.target === document.querySelector(".home-icon") ||
+        e.target === document.querySelector(".home-label")))
+        document.querySelector(".screen2").classList.remove("game-mode")+
+        document.querySelector(".settings").classList.remove("settings-active");
+if (e.which = 1 && !document.querySelector(".settings").classList.contains("settings-active") 
+&& (e.target === document.querySelector(".settings-icon") ||
+     e.target === document.querySelector(".settings-label")))
+     return document.querySelector(".settings").classList.add("settings-active");
+     if (e.which = 1 && document.querySelector(".settings").classList.contains("settings-active") 
+     && (e.target === document.querySelector(".settings-icon") ||
+     e.target === document.querySelector(".settings-label")|| e.target === document.querySelector(".close-icon")))
+  return document.querySelector(".settings").classList.remove("settings-active");
+    if (!document.getElementById("mute").checked) 
+    (document.querySelector(".volume-range").style.opacity = "30%") +
+        (document.querySelector(".volume-range").value = 0) + document.querySelector(".volume-range").setAttribute("disabled", "disabled")
+        + (document.querySelector(".volume-value").innerHTML = document.querySelector(".volume-range").value);
+    if (document.getElementById("mute").checked)
+        (document.querySelector(".volume-range").style.opacity = "100%") +
+            document.querySelector(".volume-range").removeAttribute("disabled") +
+            (document.querySelector(".volume-value").innerHTML = document.querySelector(".volume-range").value);
+    if (!document.getElementById("time").checked)
+        (document.querySelector(".time-range").style.opacity = "30%") +
+            (document.querySelector(".time-range").setAttribute("disabled", "disabled")) +
+            (document.querySelector(".time-value").innerHTML = "unset");
+    if (document.getElementById("time").checked)
+        (document.querySelector(".time-range").style.opacity = "100%") +
+            (document.querySelector(".time-range").removeAttribute("disabled")) +
+            (document.querySelector(".time-value").innerHTML = `${document.querySelector(".time-range").value} minutes`)
+
+         }
+            )
+    
+</script>
+    </body>
+</html>
