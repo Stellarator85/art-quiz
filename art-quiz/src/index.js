@@ -17,3 +17,11 @@ async function render() {
 }
 
 render();
+
+document.querySelector("h1").addEventListener("click", function(e){
+if (e.whichs=1) console.log("ghhghgg")
+ // document.querySelector("h1").classList.add("invisible") +
+}
+)
+
+//document.querySelector("h1").contains("")&& document.querySelector("h2")
