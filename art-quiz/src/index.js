@@ -24,14 +24,9 @@ render();
 
 
 
-const readline = require("readline").createInterface(
-  process.stdin,
-  process.stdout
-);
+import { promises } from "fs";
 
-const fs = require("fs");
-const fsPromises = require("fs").promises;
-const path = require("path");
+import { dirname } from "path";
 
 /*       
 var img = document.createElement("img");
@@ -47,8 +42,8 @@ img.onload = function () {
 //
 
 
-/*
-fs.promises.readdir(`${path.dirname(__filename)}/img`)
+
+promises.readdir(`${dirname(__filename)}/img`)
 .catch(function (error) {
     console.log(error);
   })
@@ -56,7 +51,7 @@ fs.promises.readdir(`${path.dirname(__filename)}/img`)
   .catch(function (error) {
     console.log(error);
   })
-  
+  /*
   fs.readFile(fs.promises.readFile(
       `${path.join(__dirname, "./project-dist", "index.html")}`,
       `utf8`
