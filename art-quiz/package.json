@@ -1,17 +1,13 @@
 {
-  "description": "My new js application",
+  "version": "0.1.0",
+  "description": "Quiz on famous painters & paintings",
   "private": true,
-  "name": "my-app",
-  "type": "module",
+  "name": "art-quiz",
   "scripts": {
     "start": "rss-scripts start",
     "build": "rss-scripts build"
   },
   "devDependencies": {
     "rss-scripts": "^0.2.4"
-  },
-  "browser": {
-    "fs": false,
-    "path": false
   }
 }

@@ -86,6 +86,28 @@
         <img src="images/rs_school_js.svg" class="rs-school-logo">Javascript/Front-end 2021Q3</a>
 
 </footer>
+<script type="module">
+   import {promises as fs} from 'fs'; 
+ // import path from '../node_modules/path';
+  //  const fsPromises = require('fs');
+// const path = require.resolve('path');
+
+const readableStream = fs.createReadStream(
+  `${path.dirname(__filename)}/images.js`,
+  "utf8"
+);
+readableStream.on("data", function (text) {
+  console.log(`↓↓↓ В данном файле хранится следующий текст: ↓↓↓
+"${text}"`);
+});
+
+/*----простой метод без использования ReadStream----
+fs.readFile("01-read-file/text.txt", "utf8", function (error, data) {
+  error ? error : console.log(data);
+});
+*/
+
+</script>
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
