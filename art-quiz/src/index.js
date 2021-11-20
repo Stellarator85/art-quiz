@@ -1,4 +1,4 @@
-import image from "./images/lazy.png";
+//import image from "./images/lazy.png";
 
 const createImage = (src) =>
   new Promise((res, rej) => {
@@ -7,7 +7,7 @@ const createImage = (src) =>
     img.onerror = rej;
     img.src = src;
   });
-
+/*
 async function render() {
   const subHeader = document.createElement("h2");
   subHeader.innerHTML = "This elements was created by js";
@@ -17,11 +17,55 @@ async function render() {
 }
 
 render();
+*/
 
-document.querySelector("h1").addEventListener("click", function(e){
-if (e.whichs=1) console.log("ghhghgg")
- // document.querySelector("h1").classList.add("invisible") +
-}
-)
+
+
 
 //document.querySelector("h1").contains("")&& document.querySelector("h2")
+import fs from "fs";
+import { promises as fsPromises } from "fs";
+import path from "path";
+
+import { EventEmitter } from "events";
+
+const readline = require("readline").createInterface(
+  process.stdin,
+  process.stdout
+);
+
+var em = new EventEmitter(); // Обработчик
+em.on('click', function() { // Создание события
+	// Вывод информации при срабатывании события
+	console.log("Это событие сработало!");
+});
+
+/*       
+var img = document.createElement("img");
+
+img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${getTimeOfDay().slice(
+  5
+)}/${getRandomNum(1, 20).toString().padStart(2, 0)}.jpg`;
+
+img.onload = function () {
+  document.body.style.backgroundImage = `url(${img.src})`;
+};
+*/
+//
+
+
+/*
+fs.promises.readdir(`${path.dirname(__filename)}/img`)
+.catch(function (error) {
+    console.log(error);
+  })
+  .then((files) => console.log(files.map(file => file.split("."))))
+  .catch(function (error) {
+    console.log(error);
+  })
+  
+  fs.readFile(fs.promises.readFile(
+      `${path.join(__dirname, "./project-dist", "index.html")}`,
+      `utf8`
+    ))
+    */

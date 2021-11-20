@@ -1,4 +1,4 @@
-const images = [
+﻿const images = [
     {
         author: 'Павел Федотов',
         name: 'Сватовство майора',
@@ -540,7 +540,7 @@ const images = [
         imageNum: '89',
     },
     {
-        author: 'Василий тропинин',
+        author: 'Василий Тропинин',
         name: 'Девушка с горшком роз',
         year: '1850',
         imageNum: '90',
