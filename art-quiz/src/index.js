@@ -20,21 +20,19 @@ render();
 */
 
 
-
-
 //document.querySelector("h1").contains("")&& document.querySelector("h2")
-const fs = require("fs");
-const fsPromises = require("fs").promises;
-const path = require("path");
+import fs from "fs";
+import { promises as fsPromises } from "fs";
+import path from "path";
 
-const events = require("events")
+import { EventEmitter } from "events";
 
 const readline = require("readline").createInterface(
   process.stdin,
   process.stdout
 );
 
-var em = new events.EventEmitter(); // Обработчик
+var em = new EventEmitter(); // Обработчик
 em.on('click', function() { // Создание события
 	// Вывод информации при срабатывании события
 	console.log("Это событие сработало!");
