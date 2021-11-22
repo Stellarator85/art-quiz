@@ -19,15 +19,34 @@ async function getAnswers() {
     if (
       (e.which = 1) &&
       paintersQuestionStep1 &&
-      (e.target = [...document.querySelectorAll(".answer-button")].filter(
-        (x) => x.innerText === data[0].author
-      ))
+      e.target ===
+        [...document.querySelectorAll(".answer-button")].filter(
+          (x) => x.innerText === data[0].author
+        )[0] &&
+      document.querySelector(".result").style.visibility === ""
     )
-      document.querySelector(".answers-container").insertAdjacentHTML(
-        "afterbegin",
-        `<button style="text-align: center; position: absolute">Correct!</br>
-        Artist ${data[0].author}</br>painted "${data[0].name}"</br>in ${data[0].year}</button>`
-      );
+      (document.querySelector(".result").style = "visibility: visible") +
+        (document.querySelector(".h6").innerText = "Correct!") +
+        (document.querySelector(
+          ".p"
+        ).innerText = `Artist ${data[0].author} painted "${data[0].name}" in ${data[0].year}.`);
+    if (
+      (e.which = 1) &&
+      paintersQuestionStep1 &&
+      [...document.querySelectorAll(".answer-button")]
+        .filter((x) => x.innerText !== data[0].author)
+        .includes(e.target) &&
+      document.querySelector(".result").style.visibility === ""
+    )
+      (document.querySelector(".result").style = "visibility: visible") +
+        (document.querySelector(".h6").style.color = "red") +
+        (document.querySelector(".h6").innerText = "Wrong!") +
+        (document.querySelector(
+          ".p"
+        ).innerText = `Artist ${data[0].author} painted "${data[0].name}" in ${data[0].year}.`);
+    ///Скрытие сообщения об ответе
+    if ((e.which = 1) && e.target === document.querySelector(".result-button"))
+      document.querySelector(".result").style.visibility = "";
   });
 }
 /*
@@ -77,12 +96,33 @@ paintingsPoster.onload = function () {
 paintingsPoster.src;
 };
 */
+
 const img = new Image();
+
+const resultImg = new Image();
+
+function getImg() {
+  resultImg.src = `full/${+resultImg.src.slice(27).split("f")[0] - 1}full.jpg`;
+  img.src = `full/${+img.src.slice(27).split("f")[0] + 1}full.jpg`;
+}
+
+function getResultImg() {
+  resultImg.src = `full/${+resultImg.src.slice(27).split("f")[0] - 1}full.jpg`;
+}
 
 img.onload = function () {
   document.querySelector(
     ".canvas-frame"
   ).style.backgroundImage = `url(${img.src})`;
+  document.querySelector(
+    ".result-canvas-frame"
+  ).style.backgroundImage = `url(${img.src})`;
+};
+
+resultImg.onload = function () {
+  document.querySelector(
+    ".result-canvas-frame"
+  ).style.backgroundImage = `url(${resultImg.src})`;
 };
 
 //----------------------------------------------------------------------------
