@@ -25,8 +25,8 @@ async function getAnswers() {
     )
       document.querySelector(".answers-container").insertAdjacentHTML(
         "afterbegin",
-        `<button>Correct</br>
-        Canvas ${data[0].author}</button>`
+        `<button style="text-align: center; position: absolute">Correct!</br>
+        Artist ${data[0].author}</br>painted "${data[0].name}"</br>in ${data[0].year}</button>`
       );
   });
 }
