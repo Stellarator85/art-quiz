@@ -39,7 +39,7 @@ main {
 
 .screen2 {
   border: 2px rgb(255, 255, 255) solid;
-
+  margin-left: -100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -55,8 +55,8 @@ main {
 }
 
 .screen2-quiz-categories-container {
-  border: 2px rgb(245, 163, 12) solid;
-  margin-left: -100%;
+  border: 1px rgb(245, 163, 12) solid;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -72,7 +72,7 @@ main {
 }
 
 table {
-  border: 4px solid green; /* #363636; */
+  border: 1px solid green; /* #363636; */
   display: flex;
   flex-direction: column;
   width: 320px;
@@ -325,18 +325,15 @@ footer {
   width: 7.5%;
 }
 
-.painters-questions {
-  position: absolute;
-  width: 300px;
+.questions-container {
   border: 2px solid #e6c300;
   background-color: rgb(255, 255, 255, 0.95);
-
+  width: 300px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   transition: margin-left 0.5s ease-in-out;
-  margin-left: -200%;
 }
 
 h3 {
@@ -349,11 +346,12 @@ h3 {
 
 .canvas-frame {
   width: 95%;
-  height: 35vh;
+  height: 45vh;
   border: 2px red solid;
   transition: 0.5s;
 
   background-size: cover;
+  background-position: center;
   background-repeat: none;
   transition: background-image 1s ease-in-out;
 }
@@ -381,4 +379,20 @@ h3 {
   border-radius: 10px;
   width: 100%;
   text-shadow: rgb(54, 54, 54, 0.3) 0 0.5px;
+}
+
+.scree2-quiz-categories-and-options-container {
+  border: 1px rgb(255, 0, 0) solid;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: -100%;
+  transition-duration: 1s;
+}
+.categories-container {
+  border: 4px green solid;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -100%;
+  transition-duration: 0.4s;
 }
