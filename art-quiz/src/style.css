@@ -248,13 +248,12 @@ footer {
   display: flex;
   flex-direction: column;
   row-gap: 0%;
-  width: 25%;
+  width: 316px;
 
   justify-content: space-between;
   text-align: center;
   background-color: rgb(255, 255, 255, 0.95);
   position: absolute;
-
   margin-top: -120%;
   border: 2px solid #e6c300;
   color: #363636;
