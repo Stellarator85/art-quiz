@@ -248,7 +248,7 @@ footer {
   display: flex;
   flex-direction: column;
   row-gap: 0%;
-  width: 320px;
+  width: 100%;
 
   justify-content: space-between;
   text-align: center;
