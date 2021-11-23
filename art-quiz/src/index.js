@@ -192,9 +192,9 @@ document.addEventListener("click", function (e) {
       (e.target === document.querySelector(".paintings-poster") ||
         e.target === document.querySelector(".paintings-label")))
   )
-    document
-      .querySelector(".screen2-quiz-categories-container")
-      .classList.add("categories-mode") +
+    (document.querySelector(
+      ".scree2-quiz-categories-and-options-container"
+    ).style.marginLeft = "-0%") +
       (flag = false) +
       (document.querySelectorAll(
         "th"
@@ -248,7 +248,8 @@ document.addEventListener("click", function (e) {
         .querySelector(".screen2-quiz-categories-container")
         .classList.remove("categories-mode") +
       (document.querySelector(".categories-container").style.marginLeft =
-        "-100%");
+        "-100%") +
+      document.querySelector(".settings").classList.remove("settings-active");
   // возврат к темам
   if (
     (e.which =
@@ -364,7 +365,7 @@ ${document.querySelector(".volume-range").value}%`);
       getAnswers();
   //реакция на правильный ответ
 
-  /////////////////////////////////////////// Вопросы прокартины;
+  /////////////////////////////////////////// Вопросы про картины;
 
   let paintingsQuestions = document.createElement("div");
   paintingsQuestions.innerHTML = `<h3>Which canvas was 
