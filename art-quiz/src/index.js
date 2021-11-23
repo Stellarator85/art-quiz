@@ -186,7 +186,11 @@ categoryPaintingsImage10.src = "img/220.jpg";
 const categoryPaintingsImage11 = new Image();
 categoryPaintingsImage11.src = "img/230.jpg";
 
-//
+//Полномасштабные Картинки для вопросов
+
+const fullImage0 = new Image();
+
+fullImage0.src = "full/0full.jpg";
 
 document.addEventListener("click", function (e) {
   // переход к выбору темы
@@ -404,11 +408,15 @@ ${document.querySelector(".volume-range").value}%`);
     ([...document.querySelectorAll("th")].includes(e.target) ||
       [...document.querySelectorAll("h5")].includes(e.target))
   )
-    (document.querySelector(".categories-container").style.marginLeft =
-      "100%") +
+    return (
+      (document.querySelector(
+        ".canvas-frame"
+      ).style.backgroundImage = `url(${fullImage0.src}`) +
+      (document.querySelector(".categories-container").style.marginLeft =
+        "100%") +
       (document.querySelector("h3").innerText = "Who painted this canvas?") +
-      (img.src = "full/0full.jpg") +
-      getAnswers();
+      getAnswers()
+    );
 
   // Переход к вопросам, чья картина
 
