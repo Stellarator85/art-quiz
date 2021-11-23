@@ -101,6 +101,10 @@ const img = new Image();
 
 const resultImg = new Image();
 
+/* const paintingsPosterImage = new Image();
+
+paintingsPosterImage.src = "images/paintings1.jpg"; */
+
 function getImg() {
   resultImg.src = `full/${+resultImg.src.slice(27).split("f")[0] - 1}full.jpg`;
   img.src = `full/${+img.src.slice(27).split("f")[0] + 1}full.jpg`;
@@ -124,7 +128,11 @@ resultImg.onload = function () {
     ".result-canvas-frame"
   ).style.backgroundImage = `url(${resultImg.src})`;
 };
-
+/*
+paintingsPosterImage.onload = function () {
+  document.querySelector(".paintings-poster").src = paintingsPosterImage.src;
+};
+*/
 //----------------------------------------------------------------------------
 
 document.addEventListener("click", function (e) {
