@@ -134,6 +134,59 @@ paintingsPosterImage.onload = function () {
 };
 */
 //----------------------------------------------------------------------------
+// Картинки для категорий
+
+const categoryPaintersImage0 = new Image();
+categoryPaintersImage0.src = "img/0.jpg";
+const categoryPaintersImage1 = new Image();
+categoryPaintersImage1.src = "img/10.jpg";
+const categoryPaintersImage2 = new Image();
+categoryPaintersImage2.src = "img/20.jpg";
+const categoryPaintersImage3 = new Image();
+categoryPaintersImage3.src = "img/30.jpg";
+const categoryPaintersImage4 = new Image();
+categoryPaintersImage4.src = "img/40.jpg";
+const categoryPaintersImage5 = new Image();
+categoryPaintersImage5.src = "img/50.jpg";
+const categoryPaintersImage6 = new Image();
+categoryPaintersImage6.src = "img/60.jpg";
+const categoryPaintersImage7 = new Image();
+categoryPaintersImage7.src = "img/70.jpg";
+const categoryPaintersImage8 = new Image();
+categoryPaintersImage8.src = "img/80.jpg";
+const categoryPaintersImage9 = new Image();
+categoryPaintersImage9.src = "img/90.jpg";
+const categoryPaintersImage10 = new Image();
+categoryPaintersImage10.src = "img/100.jpg";
+const categoryPaintersImage11 = new Image();
+categoryPaintersImage11.src = "img/110.jpg";
+
+const categoryPaintingsImage0 = new Image();
+categoryPaintingsImage0.src = "img/120.jpg";
+const categoryPaintingsImage1 = new Image();
+categoryPaintingsImage1.src = "img/130.jpg";
+const categoryPaintingsImage2 = new Image();
+categoryPaintingsImage2.src = "img/140.jpg";
+const categoryPaintingsImage3 = new Image();
+categoryPaintingsImage3.src = "img/150.jpg";
+const categoryPaintingsImage4 = new Image();
+categoryPaintingsImage4.src = "img/160.jpg";
+const categoryPaintingsImage5 = new Image();
+categoryPaintingsImage5.src = "img/170.jpg";
+const categoryPaintingsImage6 = new Image();
+categoryPaintingsImage6.src = "img/180.jpg";
+const categoryPaintingsImage7 = new Image();
+categoryPaintingsImage7.src = "img/190.jpg";
+const categoryPaintingsImage8 = new Image();
+categoryPaintingsImage8.src = "img/200.jpg";
+const categoryPaintingsImage9 = new Image();
+categoryPaintingsImage9.src = "img/210.jpg";
+const categoryPaintingsImage10 = new Image();
+categoryPaintingsImage10.src = "img/220.jpg";
+const categoryPaintingsImage11 = new Image();
+categoryPaintingsImage11.src = "img/230.jpg";
+
+//
 
 document.addEventListener("click", function (e) {
   // переход к выбору темы
@@ -159,40 +212,40 @@ document.addEventListener("click", function (e) {
       (flag = true) +
       (document.querySelectorAll(
         "th"
-      )[0].style = `background-image:url("img/0.jpg")`) +
+      )[0].style = `background-image:url("${categoryPaintersImage0.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[1].style = `background-image:url("img/10.jpg")`) +
+      )[1].style = `background-image:url("${categoryPaintersImage1.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[2].style = `background-image:url("img/20.jpg")`) +
+      )[2].style = `background-image:url("${categoryPaintersImage2.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[3].style = `background-image:url("img/30.jpg")`) +
+      )[3].style = `background-image:url("${categoryPaintersImage3.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[4].style = `background-image:url("img/40.jpg")`) +
+      )[4].style = `background-image:url("${categoryPaintersImage4.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[5].style = `background-image:url("img/50.jpg")`) +
+      )[5].style = `background-image:url("${categoryPaintersImage5.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[6].style = `background-image:url("img/60.jpg")`) +
+      )[6].style = `background-image:url("${categoryPaintersImage6.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[7].style = `background-image:url("img/70.jpg")`) +
+      )[7].style = `background-image:url("${categoryPaintersImage7.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[8].style = `background-image:url("img/80.jpg")`) +
+      )[8].style = `background-image:url("${categoryPaintersImage8.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[9].style = `background-image:url("img/90.jpg")`) +
+      )[9].style = `background-image:url("${categoryPaintersImage9.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[10].style = `background-image:url("img/100.jpg")`) +
+      )[10].style = `background-image:url("${categoryPaintersImage10.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[11].style = `background-image:url("img/110.jpg")`);
+      )[11].style = `background-image:url("${categoryPaintersImage11.src}")`);
   //переход к выбору категорий с вопросами по картинами
   if (
     (e.which =
@@ -206,40 +259,40 @@ document.addEventListener("click", function (e) {
       (flag = false) +
       (document.querySelectorAll(
         "th"
-      )[0].style = `background-image:url("img/120.jpg")`) +
+      )[0].style = `background-image:url("${categoryPaintingsImage0.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[1].style = `background-image:url("img/130.jpg")`) +
+      )[1].style = `background-image:url("${categoryPaintingsImage1.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[2].style = `background-image:url("img/140.jpg")`) +
+      )[2].style = `background-image:url("${categoryPaintingsImage2.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[3].style = `background-image:url("img/150.jpg")`) +
+      )[3].style = `background-image:url("${categoryPaintingsImage3.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[4].style = `background-image:url("img/160.jpg")`) +
+      )[4].style = `background-image:url("${categoryPaintingsImage4.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[5].style = `background-image:url("img/170.jpg")`) +
+      )[5].style = `background-image:url("${categoryPaintingsImage5.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[6].style = `background-image:url("img/180.jpg")`) +
+      )[6].style = `background-image:url("${categoryPaintingsImage6.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[7].style = `background-image:url("img/190.jpg")`) +
+      )[7].style = `background-image:url("${categoryPaintingsImage7.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[8].style = `background-image:url("img/200.jpg")`) +
+      )[8].style = `background-image:url("${categoryPaintingsImage8.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[9].style = `background-image:url("img/210.jpg")`) +
+      )[9].style = `background-image:url("${categoryPaintingsImage9.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[10].style = `background-image:url("img/220.jpg")`) +
+      )[10].style = `background-image:url("${categoryPaintingsImage10.src}")`) +
       (document.querySelectorAll(
         "th"
-      )[11].style = `background-image:url("img/230.jpg")`);
+      )[11].style = `background-image:url("${categoryPaintingsImage11.src}")`);
   // возврат к первоначальному экрану от выбора темы
   if (
     (e.which =
