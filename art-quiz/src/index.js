@@ -340,7 +340,8 @@ ${document.querySelector(".volume-range").value}%`);
   if (
     (e.which = 1) &&
     flag &&
-    [...document.querySelectorAll("th")].includes(e.target)
+    ([...document.querySelectorAll("th")].includes(e.target) ||
+      [...document.querySelectorAll("h5")].includes(e.target))
   )
     (document.querySelector(".categories-container").style.marginLeft =
       "100%") +
@@ -353,7 +354,8 @@ ${document.querySelector(".volume-range").value}%`);
   if (
     (e.which = 1) &&
     !flag &&
-    [...document.querySelectorAll("th")].includes(e.target)
+    ([...document.querySelectorAll("th")].includes(e.target) ||
+      [...document.querySelectorAll("h5")].includes(e.target))
   )
     (document.querySelector(".categories-container").style.marginLeft =
       "100%") +
