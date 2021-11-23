@@ -137,7 +137,7 @@ document.addEventListener("click", function (e) {
         e.target === document.querySelector("h2")))
   )
     document.querySelector(".screen2").classList.add("game-mode");
-  // переход к выбору категорий
+  // переход к выбору категорий с воапросами по художникам
 
   if (
     (e.which =
@@ -185,6 +185,7 @@ document.addEventListener("click", function (e) {
       (document.querySelectorAll(
         "th"
       )[11].style = `background-image:url("img/110.jpg")`);
+  //переход к выбору категорий с воапросами по картинами
   if (
     (e.which =
       1 &&
@@ -242,7 +243,12 @@ document.addEventListener("click", function (e) {
     document.querySelector(".screen2").classList.remove("game-mode") +
       (document.querySelector(
         ".scree2-quiz-categories-and-options-container"
-      ).style.marginLeft = "-100%");
+      ).style.marginLeft = "-100%") +
+      document
+        .querySelector(".screen2-quiz-categories-container")
+        .classList.remove("categories-mode") +
+      (document.querySelector(".categories-container").style.marginLeft =
+        "-100%");
   // возврат к темам
   if (
     (e.which =
