@@ -248,7 +248,7 @@ footer {
   display: flex;
   flex-direction: column;
   row-gap: 0%;
-  width: 320px;
+  width: 316px;
 
   justify-content: space-between;
   text-align: center;
@@ -329,6 +329,10 @@ h3 {
   font-family: "Lobster Two", cursive;
   font-size: 125%;
   text-shadow: rgb(54, 54, 54, 0.4) 0 0.5px;
+}
+
+.h3-questions-on-paintings {
+  font-size: 110%;
 }
 
 .h6 {

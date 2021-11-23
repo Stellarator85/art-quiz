@@ -254,6 +254,7 @@ footer {
   text-align: center;
   background-color: rgb(255, 255, 255, 0.95);
   position: absolute;
+
   margin-top: -120%;
   border: 2px solid #e6c300;
   color: #363636;
@@ -328,6 +329,10 @@ h3 {
   font-family: "Lobster Two", cursive;
   font-size: 125%;
   text-shadow: rgb(54, 54, 54, 0.4) 0 0.5px;
+}
+
+.h3-questions-on-paintings {
+  font-size: 110%;
 }
 
 .h6 {

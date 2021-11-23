@@ -137,7 +137,7 @@ document.addEventListener("click", function (e) {
         e.target === document.querySelector("h2")))
   )
     document.querySelector(".screen2").classList.add("game-mode");
-  // переход к выбору категорий с воапросами по художникам
+  // переход к выбору категорий с вопросами по художникам
 
   if (
     (e.which =
@@ -185,7 +185,7 @@ document.addEventListener("click", function (e) {
       (document.querySelectorAll(
         "th"
       )[11].style = `background-image:url("img/110.jpg")`);
-  //переход к выбору категорий с воапросами по картинами
+  //переход к выбору категорий с вопросами по картинами
   if (
     (e.which =
       1 &&
@@ -252,20 +252,21 @@ document.addEventListener("click", function (e) {
       document.querySelector(".settings").classList.remove("settings-active");
   // возврат к темам
   if (
-    (e.which =
-      1 &&
-      (e.target === document.querySelector(".home-icon") ||
-        e.target === document.querySelector(".home-label")) &&
-      document
-        .querySelector(".screen2-quiz-categories-container")
-        .classList.contains("categories-mode"))
+    (e.which = 1) &&
+    (e.target === document.querySelector(".home-icon") ||
+      e.target === document.querySelector(".home-label"))
   )
-    document
-      .querySelector(".screen2-quiz-categories-container")
-      .classList.remove("categories-mode");
+    (document.querySelector(
+      ".scree2-quiz-categories-and-options-container"
+    ).style.marginLeft = "-100%") +
+      (document
+        .querySelector(".screen2-quiz-categories-container")
+        .classList.remove("categories-mode") +
+        (document.querySelector(".categories-container").style.marginLeft =
+          "-100%"));
 
   // Настройки
-  if (
+  /* if (
     (e.which =
       1 &&
       !document
@@ -274,8 +275,8 @@ document.addEventListener("click", function (e) {
       (e.target === document.querySelector(".home-icon") ||
         e.target === document.querySelector(".home-label")))
   )
-    document.querySelector(".screen3").classList.remove("options-mode");
-  if (
+    document.querySelector(".screen3").classList.remove("options-mode"); */
+  /*  if (
     (e.which =
       1 &&
       document
@@ -285,7 +286,7 @@ document.addEventListener("click", function (e) {
         e.target === document.querySelector(".home-label")))
   )
     document.querySelector(".screen3").classList.remove("options-mode") +
-      document.querySelector(".settings").classList.remove("settings-active");
+      document.querySelector(".settings").classList.remove("settings-active"); */
   if (
     (e.which =
       1 &&
@@ -334,24 +335,7 @@ ${document.querySelector(".volume-range").value}%`);
         document.querySelector(".time-range").value
       } minutes`);
 
-  // Переход к вопросам
-
-  // img.src = `full/${getRandomNum(0, 119).toString()}full.jpg`;
-
-  //let canvasFrame = document.createElement("img");
-  //  canvasFrame.className="canvas-frame";
-
-  // document.body.style.backgroundImage = `url(${img.src})`;
-
-  // var paintersQuestions = document.createElement("div");
-  //  paintersQuestions.className=`painters-questions`;
-  // paintersQuestions.innerHTML=`<h3>Who Painted The Canvas?</h3>`;
-
-  //  paintersQuestions.appendChild(canvasFrame);
-
-  //     paintersQuestions.insertAdjacentHTML
-
-  "beforeend", "<ul><li>1111</li><li>2222</li><li>3333</li><li>4444</li></ul>";
+  // Переход к вопросам, кто художник
 
   if (
     (e.which = 1) &&
@@ -363,17 +347,34 @@ ${document.querySelector(".volume-range").value}%`);
       (document.querySelector("h3").innerText = "Who painted this canvas?") +
       (img.src = "full/0full.jpg") +
       getAnswers();
+
+  // Переход к вопросам, чья картина
+
+  if (
+    (e.which = 1) &&
+    !flag &&
+    [...document.querySelectorAll("th")].includes(e.target)
+  )
+    (document.querySelector(".categories-container").style.marginLeft =
+      "100%") +
+      (document.querySelector("h3").innerText =
+        "Which canvas was painted by?") +
+      (img.src = "full/0full.jpg") +
+      document.querySelector("h3").classList.add("h3-questions-on-paintings") +
+      getAnswers();
+
   //реакция на правильный ответ
 
   /////////////////////////////////////////// Вопросы про картины;
-
-  let paintingsQuestions = document.createElement("div");
+  /*
+ let paintingsQuestions = document.createElement("div");
   paintingsQuestions.innerHTML = `<h3>Which canvas was 
 
 painted by <span class="painter-name"></span>?
 
 </h3></br></br></br></br>
             <div class="question-container"></div>`;
+  
   paintingsQuestions.style = "position:absolute";
   if (
     (e.which = 1) &&
@@ -388,4 +389,5 @@ painted by <span class="painter-name"></span>?
 
         paintingsQuestions
       );
+*/
 });
