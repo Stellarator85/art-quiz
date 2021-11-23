@@ -349,8 +349,7 @@ ${document.querySelector(".volume-range").value}%`);
   if (
     (e.which = 1) &&
     flag &&
-    e.target ===
-      (document.querySelectorAll("th")[0] || document.querySelectorAll("h5")[0])
+    [...document.querySelectorAll("th")].includes(e.target)
   )
     (document.querySelector(".categories-container").style.marginLeft =
       "100%") +
