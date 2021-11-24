@@ -10,7 +10,7 @@ title {
 
 body {
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
   color: white;
   text-transform: uppercase;
   background-color: #363636;
@@ -50,16 +50,17 @@ main {
 .screen2-quiz-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .screen2-quiz-categories-container {
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-content: center;
+  justify-content: center;
+
   align-items: center;
-  justify-items: center;
+
   transition-duration: 1s;
 }
 
@@ -95,6 +96,7 @@ th {
   background-size: cover;
   background-repeat: no-repeat;
   /* border: solid 33% #363636; */
+  background-position: center;
   border-radius: 50%;
 }
 
@@ -315,7 +317,7 @@ footer {
 .questions-container {
   border: 2px solid #e6c300;
   background-color: rgb(255, 255, 255, 0.95);
-  width: 300px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -329,6 +331,7 @@ h3 {
   font-family: "Lobster Two", cursive;
   font-size: 125%;
   text-shadow: rgb(54, 54, 54, 0.4) 0 0.5px;
+  width: 300px;
 }
 
 .h3-questions-on-paintings {
@@ -356,7 +359,7 @@ h3 {
   width: 95%;
   height: 14rem;
 
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
@@ -372,7 +375,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: flex-start;
   visibility: hidden;
   background-color: rgb(255, 255, 255, 0.95);
   height: 14rem;
@@ -426,7 +429,107 @@ h3 {
 }
 .categories-container {
   display: flex;
-  justify-content: space-between;
+  width: 640px;
   margin-left: -100%;
   transition-duration: 0.4s;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  main,
+  .screen2,
+  h2,
+  h4,
+  .screen2-quiz-options-container,
+  .settings-container {
+    width: 768px;
+  }
+
+  h1 {
+    width: 768px;
+    font-size: 750%;
+  }
+
+  h2 {
+    width: 768px;
+    font-size: 300%;
+  }
+
+  .settings {
+    width: 758px;
+    height: 65vh;
+  }
+
+  .categories-container {
+    width: 1536px;
+  }
+
+  .painters-poster {
+    height: 25vh;
+  }
+
+  .paintings-poster {
+    height: 25vh;
+  }
+
+  table {
+    width: 768px;
+  }
+
+  th {
+    height: 16vh;
+  }
+
+  .home-icon {
+    width: 5%;
+  }
+
+  .questions-container {
+    width: 760px;
+  }
+
+  h3 {
+    width: 768px;
+    font-size: 160%;
+  }
+  .canvas-frame {
+    height: 40vh;
+  }
+
+  .answer-button {
+    font-size: 100%;
+  }
+
+  .result {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .result-canvas-frame {
+    background-size: cover;
+    height: 30vh;
+    width: 70%;
+  }
+
+  .h6 {
+    line-height: 100%;
+  }
+  .p {
+    line-height: 100%;
+  }
+
+  .result-button {
+    width: 16%;
+  }
+  footer {
+    font-size: 150%;
+    width: 768px;
+  }
+  .rs-school-section {
+    width: 30%;
+
+    font-size: 50%;
+  }
 }
