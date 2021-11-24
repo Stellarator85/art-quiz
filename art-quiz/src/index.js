@@ -428,8 +428,7 @@ ${document.querySelector(".volume-range").value}%`);
   )
     (document.querySelector(".categories-container").style.marginLeft =
       "100%") +
-      (document.querySelector("h3").innerText =
-        "Which canvas was painted by?") +
+      (document.querySelector("h3").innerText = "Which canvas was painted by?") +
       (img.src = "full/0full.jpg") +
       document.querySelector("h3").classList.add("h3-questions-on-paintings") +
       getAnswers();

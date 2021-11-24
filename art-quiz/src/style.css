@@ -84,7 +84,7 @@ caption {
 tr {
   display: flex;
   width: 90%;
-  align-items: flex-end;
+  align-items: center;
   margin: 0 auto;
 }
 
@@ -125,6 +125,9 @@ h2 {
 
 h4 {
   width: 320px;
+  font-family: "Lobster Two", cursive;
+  font-size: 125%;
+  color: #e6c300;
 }
 
 /*
@@ -236,13 +239,14 @@ footer {
   width: 320px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .quit-icon {
-  width: 5%;
+  width: 3.7%;
 }
 
 .settings-icon {
-  width: 1.5rem;
+  width: 5%;
 }
 
 .settings {
@@ -526,6 +530,132 @@ h3 {
   footer {
     font-size: 150%;
     width: 768px;
+  }
+  .rs-school-section {
+    width: 30%;
+
+    font-size: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  main,
+  .screen2,
+  h2,
+  h4,
+  .settings-container {
+    width: 1024px;
+  }
+
+  .screen2-quiz-options-container {
+    width: 1024px;
+  }
+
+  .settings-container {
+    align-self: flex-start;
+  }
+
+  label {
+    height: 2vh;
+  }
+
+  h1 {
+    width: 1024px;
+    font-size: 750%;
+  }
+
+  h2 {
+    width: 1024px;
+    font-size: 300%;
+  }
+
+  h4 {
+    width: 1024px;
+    font-size: 170%;
+  }
+
+  .settings {
+    width: 1010px;
+    height: 65vh;
+  }
+
+  .categories-container {
+    width: 2048px;
+  }
+
+  .painters-poster {
+    width: 50%;
+  }
+
+  .painters-label {
+    font-family: "Shalimar", cursive;
+
+    font-size: 300%;
+  }
+  .paintings-poster {
+    width: 50%;
+  }
+
+  .paintings-label {
+    font-family: "Shalimar", cursive;
+    font-size: 300%;
+  }
+
+  table {
+    width: 1024px;
+  }
+
+  th {
+    height: 14.3vh;
+  }
+
+  .home-icon {
+    width: 5%;
+  }
+
+  .questions-container {
+    width: 1010px;
+  }
+
+  h3 {
+    width: 1024px;
+    font-size: 160%;
+  }
+
+  .canvas-frame {
+    height: 40vh;
+  }
+
+  .answer-button {
+    font-size: 100%;
+  }
+
+  .result {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .result-canvas-frame {
+    background-size: cover;
+    height: 30vh;
+    width: 70%;
+  }
+
+  .h6 {
+    line-height: 100%;
+  }
+  .p {
+    line-height: 100%;
+  }
+
+  .result-button {
+    width: 16%;
+  }
+  footer {
+    font-size: 150%;
+    width: 1024px;
   }
   .rs-school-section {
     width: 30%;
