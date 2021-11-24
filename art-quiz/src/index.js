@@ -26,8 +26,9 @@ async function getAnswers() {
       document.querySelector(".result").style.visibility === ""
     )
       (document.querySelector(".result").style = "visibility: visible") +
+        (img.src = categoryPaintersImage0.src) +
         (document.querySelector(".h6").innerText = "Correct!") +
-        (document.querySelector(".h6").style.color = "#e6c300")+
+        (document.querySelector(".h6").style.color = "#e6c300") +
         (document.querySelector(
           ".p"
         ).innerText = `Artist ${data[0].author} painted "${data[0].name}" in ${data[0].year}.`);
@@ -40,6 +41,7 @@ async function getAnswers() {
       document.querySelector(".result").style.visibility === ""
     )
       (document.querySelector(".result").style = "visibility: visible") +
+        (img.src = categoryPaintersImage0.src) +
         (document.querySelector(".h6").style.color = "red") +
         (document.querySelector(".h6").innerText = "Wrong!") +
         (document.querySelector(
@@ -429,7 +431,8 @@ ${document.querySelector(".volume-range").value}%`);
   )
     (document.querySelector(".categories-container").style.marginLeft =
       "100%") +
-      (document.querySelector("h3").innerText = "Which canvas was painted by?") +
+      (document.querySelector("h3").innerText =
+        "Which canvas was painted by?") +
       (img.src = "full/0full.jpg") +
       document.querySelector("h3").classList.add("h3-questions-on-paintings") +
       getAnswers();
