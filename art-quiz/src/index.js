@@ -27,6 +27,7 @@ async function getAnswers() {
     )
       (document.querySelector(".result").style = "visibility: visible") +
         (document.querySelector(".h6").innerText = "Correct!") +
+        (document.querySelector(".h6").style.color = "#e6c300")+
         (document.querySelector(
           ".p"
         ).innerText = `Artist ${data[0].author} painted "${data[0].name}" in ${data[0].year}.`);
